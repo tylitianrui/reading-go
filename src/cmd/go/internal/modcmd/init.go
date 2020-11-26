@@ -44,6 +44,7 @@ func runInit(cmd *base.Command, args []string) {
 		base.Fatalf("go mod init: modules disabled by GO111MODULE=off; see 'go help modules'")
 	}
 	modFilePath := modload.ModFilePath()
+	// 判断文件是否存在
 	if _, err := os.Stat(modFilePath); err == nil {
 		base.Fatalf("go mod init: go.mod already exists")
 	}

@@ -11,7 +11,7 @@ import (
 	"unsafe"
 )
 
-var buildVersion = sys.TheVersion
+var buildVersion = sys.TheVersion // sys.TheVersion值:`go1.14.4`
 
 // set using cmd/go/internal/modload.ModInfoProg
 var modinfo string
